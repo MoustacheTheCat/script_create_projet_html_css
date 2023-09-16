@@ -4,9 +4,11 @@ Crée le scrip dans ./bin :
 
 	sudo touch create_new_projet_html.sh 
 
-Puis copier le code dans le fichier create_projet_html_css.sh :
+Ouvre le fichier create_new_projet_html.sh
 
 	sudo nano  create_new_projet_html.sh 
+
+Puis copier le code dans le fichier create_projet_html_css.sh :
 
 	function create_new_projet_html() {
    		local name="$1"  
