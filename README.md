@@ -48,14 +48,14 @@ Relancer bashrc pour prendre en compte la modification :
 vous pouvez maintenant exécuter la commande 
 
 	create_temp_w.sh option nom du projet
- 
+
 Option disponible 
 
--> lnnb -> local not nav bar
--> lwnb -> local with nav bar
--> cnnb -> Clone Repository Git not nav bar
--> cwnb -> Clone Repository Git with nav bar
-
+	-> lnnb -> local not nav bar
+	-> lwnb -> local with nav bar
+	-> cnnb -> Clone Repository Git not nav bar
+	-> cwnb -> Clone Repository Git with nav bar
+	
 pour crée votre nouveau projet.
 
 
@@ -75,7 +75,6 @@ vous pouvez maintenant exécuter la commande
 
  	votre_alias option nom_du_projet
 
- 
 
 
 V1.0.0
