@@ -14,18 +14,22 @@ Puis copier le code dans le fichier create_projet_html_css.sh :
     local option="$1"
     local name="$2"
 
-    if [ "$option" = "cnnb" ]; then
+    # cnnb -> clone git not nav bar
+    if [ "$option" = "cnnb" ]; then 
         git clone https://votre repository.git "$name"
+    # cwnb -> clone git with nav bar
     elif [ "$option" = "cwnb" ]; then
         git clone https:/votre repository.git "$name"
+    # local not nav bar	
     elif [ "$option" = "lnnb" ]; then
-        mkdir -p "$name"/{css,font,img/{logo,picture}} && touch "$name"/index.html && touch "$name"/css/style.css
+        mkdir -p "$name"/{css,font,img/{logo,picture}} && touch "$name"/index.html && touch "$name"/css/style.css   
+    # local with nav bar	
     elif [ "$option" = "lwnb" ]; then
         cp -r -u /emplacement_de_votre_template/ "$name"
     fi
     }
 	
-    # Utilisation de la fonction avec un nom de projet en argument
+    # Utilisation de la fonction avec une option et un nom de projet en argument
     create_temp_w "$1" "$2"
 
 Rendre le fichier executable:
