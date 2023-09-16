@@ -12,7 +12,7 @@ Puis copier le code dans le fichier create_projet_html_css.sh :
 
 	function create_new_projet_html() {
    		local name="$1"  
-    		cp -r -u /le_chemin_vers_votre_template/nom_de_la_template "$name"
+    		mkdir -p "$name"/{css,font,img/{logo,picture}} && touch "$name"/index.html && touch "$name"/css/style.css
 	}
 	# Utilisation de la fonction avec un nom de projet en argument
 	create_new_projet_html ‘$1’
@@ -34,6 +34,10 @@ Relancer bashrc pour prendre en compte la modification :
 	source ~/.bashrc
 
 
-vous pouvez maintenant exécuter la commande create_new_projet_html.sh ‘nom du projet’ depuis n’importe ou sur votre systèmes.
+vous pouvez maintenant exécuter la commande 
 
-V2.0.0
+	create_new_projet_html.sh ‘nom du projet’
+
+pour crée votre projet.
+
+V1.0.0
