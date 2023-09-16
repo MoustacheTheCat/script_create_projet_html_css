@@ -2,10 +2,10 @@
 
 Crée le scrip dans ./bin :
 
-	touch create_projet_html_css.sh 
+	sudo touch create_projet_html_css.sh 
 
 Puis copier le code dans le fichier create_projet_html_css.sh :
-	nano  create_projet_html_css.sh 
+	sudo nano  create_projet_html_css.sh 
 
 	function create_projet_html() {
    		local name="$1"  
