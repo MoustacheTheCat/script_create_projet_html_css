@@ -15,7 +15,7 @@ Puis copier le code dans le fichier create_projet_html_css.sh :
     		cp -r -u /le_chemin_vers_votre_template/nom_de_la_template "$name"
 	}
 	# Utilisation de la fonction avec un nom de projet en argument
-	create_html_from_template ‘$1’
+	create_html_from_template "$1"
 
 Rendre le fichier executable:
 
@@ -34,6 +34,10 @@ Relancer bashrc pour prendre en compte la modification :
 	source ~/.bashrc
 
 
-vous pouvez maintenant exécuter la commande create_html_from_template.sh ‘nom du projet’ depuis n’importe ou sur votre systèmes.
+vous pouvez maintenant exécuter la commande 
+
+	create_html_from_template.sh ‘nom du projet’
+
+depuis n’importe ou sur votre systèmes.
 
 V2.0.0
