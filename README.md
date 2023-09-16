@@ -15,7 +15,7 @@ Puis copier le code dans le fichier create_projet_html_css.sh :
     		mkdir -p "$name"/{css,font,img/{logo,picture}} && touch "$name"/index.html && touch "$name"/css/style.css
 	}
 	# Utilisation de la fonction avec un nom de projet en argument
-	create_new_projet_html ‘$1’
+	create_new_projet_html "$1"
 
 Rendre le fichier executable:
 
