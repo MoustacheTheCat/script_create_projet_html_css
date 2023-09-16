@@ -38,6 +38,6 @@ vous pouvez maintenant exécuter la commande
 
 	create_html_from_template.sh ‘nom du projet’
 
-depuis n’importe ou sur votre systèmes.
+pour crée votre projet depuis votre template.
 
 V2.0.0
