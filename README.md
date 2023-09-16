@@ -47,7 +47,7 @@ Relancer bashrc pour prendre en compte la modification :
 
 vous pouvez maintenant exécuter la commande 
 
-	create_temp_w.sh 'option' ‘nom du projet’
+	create_temp_w.sh option nom du projet
  
 Option disponible 
 
@@ -57,5 +57,25 @@ Option disponible
 -> cwnb -> Clone Repository Git with nav bar
 
 pour crée votre nouveau projet.
+
+
+Vous pouvez aussi crée un alias pour racourcir encore le code
+
+ 	nano ~/.bashrc
+
+Puis ajouter la ligne 
+
+	alias votre_alias='/chemin_vers_le_script/create_temp_w.sh'
+
+Relancer a nouveau bashrc pour prendre en compte la modification :
+
+	source ~/.bashrc
+
+vous pouvez maintenant exécuter la commande 
+
+ 	votre_alias option nom_du_projet
+
+ 
+
 
 V1.0.0
