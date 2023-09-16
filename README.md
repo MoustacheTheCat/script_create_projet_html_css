@@ -38,6 +38,6 @@ vous pouvez maintenant exécuter la commande
 
 	create_new_projet_html.sh ‘nom du projet’
 
-pour crée votre projet.
+pour crée votre nouveau projet.
 
 V1.0.0
