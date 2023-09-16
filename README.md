@@ -1,4 +1,4 @@
-# script_create_projet_html_css
+# script_create_projet_html
 
 Crée le scrip dans ./bin :
 
@@ -31,6 +31,6 @@ Relancer bashrc pour prendre en compte la modification :
 	source ~/.bashrc
 
 
-vous pouvez maintenant exécuter la commande create_projet_html_css.sh ‘nom du projet’ depuis n’importe ou sur votre systèmes.
+vous pouvez maintenant exécuter la commande create_projet_html.sh ‘nom du projet’ depuis n’importe ou sur votre systèmes.
 
 V2.0.0
