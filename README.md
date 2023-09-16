@@ -3,6 +3,7 @@
 Crée le scrip dans ./bin :
 
 	sudo touch create_html_from_template.sh 
+ 
 Ouvre le fichier create_projet_html_from_template.sh
 
 	sudo nano  create_html_from_template.sh 
