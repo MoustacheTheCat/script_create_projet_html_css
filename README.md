@@ -1,4 +1,4 @@
-# script_create_projet_html
+# script_create_new_projet_html
 
 Crée le scrip dans ./bin :
 
