@@ -16,7 +16,7 @@ Puis copier le code dans le fichier create_projet_html_css.sh :
 
 Rendre le fichier executable:
 
-	sudo chmod +x nom_du_fichier.sh
+	sudo chmod +x create_projet_html.sh
 
 Editer le PATH pour rendre le fichier utilisable :
 	
