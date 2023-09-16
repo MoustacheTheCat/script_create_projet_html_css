@@ -2,24 +2,35 @@
 
 Crée le scrip dans ./bin :
 
-	sudo touch create_new_projet_html.sh 
+	sudo touch create_temp_w.sh 
 
 Ouvre le fichier create_new_projet_html.sh
 
-	sudo nano  create_new_projet_html.sh 
+	sudo nano  create_temp_w.sh 
 
 Puis copier le code dans le fichier create_projet_html_css.sh :
 
-	function create_new_projet_html() {
-   		local name="$1"  
-    		mkdir -p "$name"/{css,font,img/{logo,picture}} && touch "$name"/index.html && touch "$name"/css/style.css
-	}
-	# Utilisation de la fonction avec un nom de projet en argument
-	create_new_projet_html "$1"
+    function create_temp_w() {
+    local option="$1"
+    local name="$2"
+
+    if [ "$option" = "cnnb" ]; then
+        git clone https://votre repository.git "$name"
+    elif [ "$option" = "cwnb" ]; then
+        git clone https:/votre repository.git "$name"
+    elif [ "$option" = "lnnb" ]; then
+        mkdir -p "$name"/{css,font,img/{logo,picture}} && touch "$name"/index.html && touch "$name"/css/style.css
+    elif [ "$option" = "lwnb" ]; then
+        cp -r -u /emplacement_de_votre_template/ "$name"
+    fi
+    }
+	
+    # Utilisation de la fonction avec un nom de projet en argument
+    create_temp_w "$1" "$2"
 
 Rendre le fichier executable:
 
-	sudo chmod +x create_new_projet_html.sh
+	sudo chmod +x create_temp_w.sh
 
 Editer le PATH pour rendre le fichier utilisable :
 	
@@ -36,7 +47,14 @@ Relancer bashrc pour prendre en compte la modification :
 
 vous pouvez maintenant exécuter la commande 
 
-	create_new_projet_html.sh ‘nom du projet’
+	create_temp_w.sh 'option' ‘nom du projet’
+ 
+Option disponible 
+
+-> lnnb -> local not nav bar
+-> lwnb -> local with nav bar
+-> cnnb -> Clone Repository Git not nav bar
+-> cwnb -> Clone Repository Git with nav bar
 
 pour crée votre nouveau projet.
 
