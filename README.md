@@ -2,10 +2,11 @@
 
 Crée le scrip dans ./bin :
 
-	touch create_projet_html_css.sh 
+	sudo touch create_projet_html.sh 
 
 Puis copier le code dans le fichier create_projet_html_css.sh :
-	nano  create_projet_html_css.sh 
+
+	sudo nano  create_projet_html_css.sh 
 
 	function create_projet_html() {
    		local name="$1"  
@@ -16,7 +17,7 @@ Puis copier le code dans le fichier create_projet_html_css.sh :
 
 Rendre le fichier executable:
 
-	sudo chmod +x nom_du_fichier.sh
+	sudo chmod +x create_projet_html.sh
 
 Editer le PATH pour rendre le fichier utilisable :
 	
@@ -31,7 +32,7 @@ Relancer bashrc pour prendre en compte la modification :
 	source ~/.bashrc
 
 
-vous pouvez maintenant exécuter la commande create_projet_html_css.sh ‘nom du projet’ depuis n’importe ou sur votre systèmes.
+vous pouvez maintenant exécuter la commande create_projet_html.sh ‘nom du projet’ depuis n’importe ou sur votre systèmes.
 
 V1.0.0
 
