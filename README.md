@@ -14,13 +14,15 @@ Puis copier le code dans le fichier create_projet_html_css.sh :
         local name="$1"
         local repository="$2"
 
+ 	# nnb -> not nav bar
         if [ "$repository" = "nnb" ];then  
                 git clone https://github.com/remplacer_par_votre_depot_git.git  "$name"
+	# nnb -> with nav bar
         elif [ "$repository" = "wnb" ];then
                 git clone https://github.com/remplacer_par_votre_depot_git.git "$name"
         fi
     }
-    # Utilisation de la fonction avec un nom de projet en argument
+    # Utilisation de la fonction avec une option et un nom de projet en argument
     create_with_git_clone "$1" "$2"
 
 
