@@ -10,27 +10,44 @@ Ouvre le fichier create_new_projet_html.sh
 
 Puis copier le code dans le fichier create_projet_html_css.sh :
 
-    function create_temp_w() {
-    local option="$1"
-    local name="$2"
+	    globct() {
+	    local option="$1"
+	    local name="$2"
+	    local nb="$3"
 
-    # cnnb -> clone git not nav bar
-    if [ "$option" = "cnnb" ]; then 
-        git clone https://votre repository.git "$name"
-    # cwnb -> clone git with nav bar
-    elif [ "$option" = "cwnb" ]; then
-        git clone https:/votre repository.git "$name"
-    # local not nav bar	
-    elif [ "$option" = "lnnb" ]; then
-        mkdir -p "$name"/{css,font,img/{logo,picture}} && touch "$name"/index.html && touch "$name"/css/style.css   
-    # local with nav bar	
-    elif [ "$option" = "lwnb" ]; then
-        cp -r -u /emplacement_de_votre_template/ "$name"
-    fi
-    }
+	    if [ "$#" -ne 3 ]; then
+	        echo "Usage: globct <option> <name> <nb>"
+	        return 1
+	    fi
 	
-    # Utilisation de la fonction avec une option et un nom de projet en argument
-    create_temp_w "$1" "$2"
+	    if [ "$option" = "cnnb" ]; then
+	        git clone https://votre_repository.git "$name"
+	    elif [ "$option" = "cwnb" ]; then
+	        git clone https://votre_repository.git "$name"
+	    elif [ "$option" = "lnnb" ]; then
+	        cp -r -u /localisation_de_votre_template/template-html-css-responive "$name"
+	    elif [ "$option" = "lwnb" ]; then
+	        cp -r -u /localisation_de_votre_template/template-html-css-responive-with-nav-bar "$name"
+	    elif [ "$option" = "lnnbm" ]; then
+	        cp -r -u /localisation_de_votre_template/template-html-css-responive-multi-page "$name"
+	        for ((c=1; c<=nb; c++))
+	        do  
+	            cp -r -u /localisation_de_votre_template/template-html-css-responive-multi-page/html/page-1.html "$name"/html/page-"$c".html
+	        done
+	    elif [ "$option" = "lwnbm" ]; then
+	        cp -r -u /localisation_de_votre_template/template-html-css-responive-with-nav-bar-multi-page "$name"
+	        for ((c=1; c<=nb; c++))
+	        do  
+	            cp -r -u /localisation_de_votre_template/template-html-css-responive-with-nav-bar-multi-page/html/page-1.html "$name"/html/page-"$c".html
+	        done
+	    else
+	        echo "Option invalide : $option"
+	        return 1
+	    fi
+	    }
+
+	    # Utilisation de la fonction avec un nom de projet en argument
+	    globct "$1" "$2" "$3"
 
 Rendre le fichier executable:
 
@@ -55,10 +72,23 @@ vous pouvez maintenant exécuter la commande
 
 Option disponible 
 
+Option 1 :
+
 	-> lnnb -> local not nav bar
 	-> lwnb -> local with nav bar
+ 	-> lnnbm -> local not nav bar multi page
+	-> lwnbm -> local with nav bar multi page 
 	-> cnnb -> Clone Repository Git not nav bar
 	-> cwnb -> Clone Repository Git with nav bar
+
+Option 2 :
+
+ 	nom_de_votre_projet
+
+Option 3 ( si choix de Option 1 lnnbm ou lwnbm) :
+
+	nombre de page html dans le dossier html ( en plus de la page index.html)
+ 	
 	
 pour crée votre nouveau projet.
 
@@ -77,7 +107,7 @@ Relancer a nouveau bashrc pour prendre en compte la modification :
 
 vous pouvez maintenant exécuter la commande 
 
- 	votre_alias option nom_du_projet
+ 	votre_alias option1 option2 option3
 
 
 
